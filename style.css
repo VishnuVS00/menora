@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background: linear-gradient(180deg, #EAEDED 0%, #DFE9F3 100%);
+    position: relative;
+    width: 1920px;
+    height: 945px;
+    gap: 0px;
+}
+
+.ourServices {
+    border-width: 0px, 0px, 0px, 0px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    width: 437px;
+    height: 413px;
+    top: 1820px;
+    left: 277px;
+    gap: 0px;
+    opacity: 0px;
+
+}
