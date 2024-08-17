@@ -46,78 +46,78 @@ document.addEventListener('DOMContentLoaded', () => {
     rightArrow.addEventListener('click', () => feedbackContainer('right'));
 });
 
-// const container = document.querySelector('.imgContainers');
-// let isDown = false;
-// let startX;
-// let scrollLeft;
-// let autoScrollInterval;
+const container = document.querySelector('.imgContainers');
+let isDown = false;
+let startX;
+let scrollLeft;
+let autoScrollInterval;
 
-// // Duplicate content to create seamless loop
-// const cloneContent = () => {
-//     const content = container.innerHTML;
-//     container.innerHTML += content; // Append duplicate content
-// };
+// Duplicate content to create seamless loop
+const cloneContent = () => {
+    const content = container.innerHTML;
+    container.innerHTML += content; // Append duplicate content
+};
 
-// // Adjust container width after duplicating content
-// const adjustContainerWidth = () => {
-//     const totalWidth = container.scrollWidth / 2; // Half of total width
-//     container.style.width = `${totalWidth}px`;
-// };
+// Adjust container width after duplicating content
+const adjustContainerWidth = () => {
+    const totalWidth = container.scrollWidth / 2; // Half of total width
+    container.style.width = `${totalWidth}px`;
+};
 
-// // Initialize auto-scroll and content cloning
-// const init = () => {
-//     cloneContent();
-//     adjustContainerWidth();
-//     startAutoScroll();
-// };
+// Initialize auto-scroll and content cloning
+const init = () => {
+    cloneContent();
+    adjustContainerWidth();
+    startAutoScroll();
+};
 
-// // Function to start automatic scrolling
-// const startAutoScroll = () => {
-//     autoScrollInterval = setInterval(() => {
-//         container.scrollLeft += 2; // Adjust scroll speed as needed
-//         // Optional: Reset scroll to start if it reaches the end
-//         if (container.scrollLeft >= container.scrollWidth / 2) {
-//             container.scrollLeft = 0;
-//         }
-//     }, 50); // Adjust interval timing as needed
-// };
+// Function to start automatic scrolling
+const startAutoScroll = () => {
+    autoScrollInterval = setInterval(() => {
+        container.scrollLeft += 2; // Adjust scroll speed as needed
+        // Optional: Reset scroll to start if it reaches the end
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+            container.scrollLeft = 0;
+        }
+    }, 50); // Adjust interval timing as needed
+};
 
-// // Function to stop automatic scrolling
-// const stopAutoScroll = () => {
-//     clearInterval(autoScrollInterval);
-// };
+// Function to stop automatic scrolling
+const stopAutoScroll = () => {
+    clearInterval(autoScrollInterval);
+};
 
-// // Start initialization
-// init();
+// Start initialization
+init();
 
-// // Event listeners for dragging functionality
-// container.addEventListener('mousedown', (e) => {
-//     isDown = true;
-//     container.classList.add('active');
-//     startX = e.pageX - container.offsetLeft;
-//     scrollLeft = container.scrollLeft;
-//     stopAutoScroll(); // Stop automatic scrolling when user starts dragging
-// });
+// Event listeners for dragging functionality
+container.addEventListener('mousedown', (e) => {
+    isDown = true;
+    container.classList.add('active');
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+    stopAutoScroll(); // Stop automatic scrolling when user starts dragging
+});
 
-// container.addEventListener('mouseleave', () => {
-//     isDown = false;
-//     container.classList.remove('active');
-//     startAutoScroll(); // Resume automatic scrolling when user leaves the container
-// });
+container.addEventListener('mouseleave', () => {
+    isDown = false;
+    container.classList.remove('active');
+    startAutoScroll(); // Resume automatic scrolling when user leaves the container
+});
 
-// container.addEventListener('mouseup', () => {
-//     isDown = false;
-//     container.classList.remove('active');
-//     startAutoScroll(); // Resume automatic scrolling when user releases the mouse
-// });
+container.addEventListener('mouseup', () => {
+    isDown = false;
+    container.classList.remove('active');
+    startAutoScroll(); // Resume automatic scrolling when user releases the mouse
+});
 
-// container.addEventListener('mousemove', (e) => {
-//     if (!isDown) return;
-//     e.preventDefault();
-//     const x = e.pageX - container.offsetLeft;
-//     const walk = (x - startX) * 2; // Adjust scroll speed
-//     container.scrollLeft = scrollLeft - walk;
-// });
+container.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scroll speed
+    container.scrollLeft = scrollLeft - walk;
+});
 
 // const container = document.querySelector('.imgContainers');
 // let isDown = false;
