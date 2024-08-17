@@ -6,7 +6,7 @@
 .container {
     background: linear-gradient(180deg, #EAEDED 0%, #DFE9F3 100%);
     position: relative;
-    width: 100vw;
+    width: 1920px;
     height: 945px;
     gap: 0px;
     position: relative
@@ -67,10 +67,14 @@
 
 .imgContainer {
     position: absolute;
-    top: 300px;
-    left: 274px;
+    top: 308px;
+    left: 277px;
+    width: 1367px;
     display: flex;
     gap: 28px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .ourServices {
@@ -90,7 +94,7 @@
     height: 32px;
     position: absolute;
     top: 800px;
-    right: 325px;
+    right: 276px;
     display: flex;
     justify-content: space-between;
     gap: 0px;
@@ -104,7 +108,8 @@
     border: 1px 0px 0px 0px;
     opacity: 0px;
     rotate: -180 deg;
-    color: 1px solid #2293D7
+    color: 1px solid #2293D7;
+    cursor: pointer;
 }
 
 .rightArrow {
@@ -114,4 +119,71 @@
     border: 1px 0px 0px 0px;
     opacity: 0px;
     color: 1px solid #2293D7;
+    cursor: pointer;
+}
+
+.projectSubHeader {
+    width: 574px;
+    height: 50px;
+    position: absolute;
+    top: 100px;
+    left: 277px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Lato;
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: left;
+    color: #000000;
+}
+
+.projectsImgContainer {
+    position: absolute;
+    top: 208px;
+    left: 277px;
+    width: 1367px;
+    display: flex;
+    gap: 28px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.ourProjects {
+    width: 438px;
+    height: 500px;
+    top: 149px;
+    left: 270px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.feedbacks {
+    position: absolute;
+    top: 308px;
+    left: 277px;
+    width: 1367px;
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#f1,
+#f2 {
+    min-width: 660px;
+    height: 350px;
+    border: 1px solid gray;
+    top: 4952px;
+    left: 1053px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+    border-radius: 10px;
 }
