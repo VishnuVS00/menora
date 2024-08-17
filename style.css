@@ -75,12 +75,15 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-.singleService{
+
+.singleService {
     position: relative;
 }
-.singleService:active{
+
+.singleService:active {
     cursor: grabbing;
 }
+
 .ourServices {
     border-width: 0px, 0px, 0px, 0px;
     border-style: solid;
@@ -156,7 +159,7 @@
     border: 1px solid #FFFFFF;
     border-radius: 50%;
     cursor: pointer;
-}
+}sc
 
 #arrows {
     width: 88px;
@@ -219,6 +222,16 @@
     scrollbar-width: none;
 }
 
+.singleStory {
+    width: 438px;
+    height: 640px;
+    top: 2715px;
+    left: 275px;
+    gap: 0px;
+    opacity: 0px;
+    border: 1px solid #FFFFFF;
+}
+
 .ourProjects {
     width: 438px;
     height: 500px;
@@ -228,11 +241,18 @@
     opacity: 0px;
 }
 
+.feedbackContainer {
+    width: 1920px;
+    height: 830px;
+    background: #2293D7;
+    color: #FFFFFF;
+}
+
 .feedbacks {
     position: absolute;
-    top: 308px;
+    top: 260px;
     left: 277px;
-    width: 1400px;
+    min-width: 1367px;
     display: flex;
     gap: 28px;
     overflow-x: auto;
@@ -255,4 +275,14 @@
     line-height: 25px;
     text-align: left;
     border-radius: 10px;
+    padding: 34px 0 0 32px;
+}
+
+.singleFeedback {
+    position: relative;
+    max-width: 425px;
+}
+
+.singleFeedback:active {
+    cursor: grabbing;
 }
