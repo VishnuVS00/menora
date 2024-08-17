@@ -45,35 +45,55 @@ document.addEventListener('DOMContentLoaded', () => {
     leftArrow.addEventListener('click', () => feedbackContainer('left'));
     rightArrow.addEventListener('click', () => feedbackContainer('right'));
 });
+const container = document.querySelector('.imgContainers');
+let isDown = false;
+let startX;
+let scrollLeft;
+let autoScrollInterval;
 
+// Function to start automatic scrolling
+const startAutoScroll = () => {
+    autoScrollInterval = setInterval(() => {
+        container.scrollLeft += 2; // Adjust scroll speed as needed
+        // Optional: Reset scroll to start if it reaches the end
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+            container.scrollLeft = 0;
+        }
+    }, 50); // Adjust interval timing as needed
+};
 
-    const container = document.querySelector('.imgContainers');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+// Function to stop automatic scrolling
+const stopAutoScroll = () => {
+    clearInterval(autoScrollInterval);
+};
 
-    container.addEventListener('mousedown', (e) => {
-        isDown = true;
-        container.classList.add('active');
-        startX = e.pageX - container.offsetLeft;
-        scrollLeft = container.scrollLeft;
-    });
+// Start automatic scrolling on page load
+startAutoScroll();
 
-    container.addEventListener('mouseleave', () => {
-        isDown = false;
-        container.classList.remove('active');
-    });
+container.addEventListener('mousedown', (e) => {
+    isDown = true;
+    container.classList.add('active');
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+    stopAutoScroll(); // Stop automatic scrolling when user starts dragging
+});
 
-    container.addEventListener('mouseup', () => {
-        isDown = false;
-        container.classList.remove('active');
-    });
+container.addEventListener('mouseleave', () => {
+    isDown = false;
+    container.classList.remove('active');
+    startAutoScroll(); // Resume automatic scrolling when user leaves the container
+});
 
-    container.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - container.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust scroll speed
-        container.scrollLeft = scrollLeft - walk;
-    });
+container.addEventListener('mouseup', () => {
+    isDown = false;
+    container.classList.remove('active');
+    startAutoScroll(); // Resume automatic scrolling when user releases the mouse
+});
 
+container.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scroll speed
+    container.scrollLeft = scrollLeft - walk;
+});
