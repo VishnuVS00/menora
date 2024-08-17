@@ -9,7 +9,6 @@
     width: 1920px;
     height: 945px;
     gap: 0px;
-    position: relative
 }
 
 .header {
@@ -69,24 +68,94 @@
     position: absolute;
     top: 308px;
     left: 277px;
-    width: 1367px;
+    width: 1400px;
     display: flex;
     gap: 28px;
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
+.singleService{
+    position: relative;
+}
+.singleService:active{
+    cursor: grabbing;
+}
 .ourServices {
     border-width: 0px, 0px, 0px, 0px;
     border-style: solid;
     border-color: #FFFFFF;
     width: 437px;
+    position: relative;
     height: 413px;
-    top: 1820px;
-    left: 277px;
+    /* top: 1820px;
+    left: 277px; */
     gap: 0px;
     opacity: 0px;
+    background-color: white;
+}
+
+.serviceIcon {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: 32px;
+    top: 32px;
+}
+
+.serviceHeader {
+    width: 274px;
+    height: 66px;
+    position: absolute;
+    top: 128px;
+    left: 24px;
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+    color: #2293D7;
+}
+
+.serviceDescription {
+    width: 341px;
+    height: 112px;
+    position: absolute;
+    top: 210px;
+    left: 24px;
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: left;
+    color: #031312;
+}
+
+.toolsContainer {
+    width: 192px;
+    height: 42px;
+    position: absolute;
+    bottom: 32px;
+    left: 24px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.toolsIcon {
+    width: 42px;
+    height: 42px;
+}
+
+.more {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    bottom: 32px;
+    left: 371px;
+    border: 1px 0px 0px 0px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 #arrows {
@@ -142,7 +211,7 @@
     position: absolute;
     top: 208px;
     left: 277px;
-    width: 1367px;
+    width: 1400px;
     display: flex;
     gap: 28px;
     overflow: auto;
@@ -163,7 +232,7 @@
     position: absolute;
     top: 308px;
     left: 277px;
-    width: 1367px;
+    width: 1400px;
     display: flex;
     gap: 28px;
     overflow-x: auto;
